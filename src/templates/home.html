@@ -1,9 +1,31 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
 
-<h1>{{ title }} </h1>
+{% block head_title %}Welcome | {{ block.super }}{% endblock %}
 
-<form method="POST" action=""> {% csrf_token %}
-  {{ form }}
 
-<input type = 'submit' value="SignUp" />
 
-</form>
+{% block jumbotron_content %}
+<h1>Bloging</h1>
+<p>This project is just to a headsup for begining of my learnig. It is mainly to help to get some extra learning</p>
+<p>
+<a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">join me</a>
+</p>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+
+      <h1>{{ title }} </h1>
+
+      <form method="POST" action=""> {% csrf_token %}
+      {{ form | crispy }}
+
+      <input class="btn btn-primary" type = 'submit' value="SignUp" />
+
+      </form>
+    </div>
+
+</div>
+{% endblock %}

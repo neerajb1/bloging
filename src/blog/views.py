@@ -30,12 +30,12 @@ def home(request):
         # if not instance.full_name:
         #     instance.full_name = "Neeraj"
         instance.save()
-        print instance.email
-        print instance.timestamp
+        print (instance.email)
+        print (instance.timestamp)
         context = {
         "title" : "Thank you"
         }
-    return render(request , "base.html" , context)
+    return render(request , "home.html" , context)
 
 
 def contact(request):
