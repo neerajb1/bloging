@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'shuklaneeraj2014.2015@gmail.com'
-EMAIL_HOST_PASSWORD = 'neerajb143'
+EMAIL_HOST_PASSWORD = 'abc'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

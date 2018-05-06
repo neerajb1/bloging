@@ -1,4 +1,7 @@
-/* Show it's not fixed to the top */
 body {
-  min-height: 75rem;
+  min-height: 2000px;
+}
+
+.navbar-static-top {
+  margin-bottom: 19px;
 }

@@ -5,27 +5,54 @@
 
 
 
-{% block jumbotron_content %}
-<h1>Bloging</h1>
-<p>This project is just to a headsup for begining of my learnig. It is mainly to help to get some extra learning</p>
-<p>
-<a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">join me</a>
-</p>
+
+{% block jumbotron %}
+
+<div class="jumbotron">
+<div class="row">
+      <div class="col-sm-8 col-xs-6" >
+            <h1>Bloging</h1>
+            <p>This project is just to a headsup for begining of my learnig. It is mainly to help to get some extra learning</p>
+            <p>
+            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">join me</a>
+            </p>
+      </div>
+
+      <div class="col-sm-4 col-xs-6" style="background-color: black ;height : 300px;">
+      </div>
+</div>
+</div>
 {% endblock %}
 
 {% block content %}
 <div class="row">
-  <div class="col-sm-6 col-md-3">
 
-      <h1>{{ title }} </h1>
+  <div class="col-sm-3 pull-right">
 
-      <form method="POST" action=""> {% csrf_token %}
-      {{ form | crispy }}
+			<p class='lead text-align-center'>{{ title }}</p>
 
-      <input class="btn btn-primary" type = 'submit' value="SignUp" />
+			<form method='POST' action=''>{% csrf_token %}
+			{{ form|crispy }}
 
-      </form>
-    </div>
+			<input class='btn btn-primary' type='submit' value='Sign Up' />
+
+			</form>
+	</div>
+
+	<div class='col-sm-3'>
+<p class='lead text-align-center'>Built with Django &amp; Bootstrap</p>
+</div>
+
+<div class='col-sm-3'>
+<p class='lead text-align-center'>Created for Starters of all kinds. </p>
+</div>
+
+<div class='col-sm-3'>
+<p class='lead text-align-center'>Always Open Source</p>
+</div>
+
 
 </div>
+
+
 {% endblock %}

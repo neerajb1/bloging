@@ -7,6 +7,7 @@ urlpatterns = [
     # Examples:
     url(r'^$', 'blog.views.home', name='home'),
     url(r'^contact/$', 'blog.views.contact', name='contact'),
+    url(r'^about/$', 'bloging.views.about', name='about'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),

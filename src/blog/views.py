@@ -37,12 +37,16 @@ def home(request):
         }
     return render(request , "home.html" , context)
 
-
 def contact(request):
+    title = 'Contact Us'
+    title_align_center = True
     forms = ContactForm(request.POST or None)
 
     context = {
     "form" : forms ,
+    "title" : title,
+    "title_align_center" :title_align_center
+
     }
 
     if forms.is_valid():
